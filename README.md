@@ -1,20 +1,11 @@
 # SPModel.js
 JavaScript Library contains different methods for communicate with SharePoint lists/libraries.
 
+Please refer Example.js for sample method calls. Log a issue for any query :)
+
 Having following methods:
 
 getListItems - Get List Items from SharePoint, using REST API, can pass REST Filters and Number of items required (optional)
-
-Syntax
-var _spModel = new SPModel();
-_spModel.getListItems(Site URL, List Name, List Item ID, REST API Parameters, Callback Method);
-
-Parameters
-Site URL (required) - SharePoint Site URL (Must have appropriate permissions), default value - Current SharePoint Site
-List Name (required) - SharePoint List/Library Name
-List Item ID (optional, pass null if not required) - Pass Item ID to get details for particular list item
-REST API Parameters (optional, pass null if not required) - OData parameters to filter output (using $filter), Limit items count (using $top), or Select specific fields (using $select), Please refer MSDN for more details (https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests)
-Callback Method (required) - Must be a valid JavaScript function, List item data will be passed as an array of objects to callback method.
 
 saveListItem - Save List Item to SharePoint list, using SharePoint ESOM 
     
